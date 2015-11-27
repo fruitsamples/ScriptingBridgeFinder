@@ -6,98 +6,17 @@
 #import <ScriptingBridge/ScriptingBridge.h>
 
 
-@class FinderApplication, FinderItem, FinderContainer, FinderComputerObject, FinderDisk, FinderFolder, FinderDesktopObject, FinderTrashObject, FinderFile, FinderAliasFile, FinderApplicationFile, FinderDocumentFile, FinderInternetLocationFile, FinderClipping, FinderPackage, FinderWindow, FinderFinderWindow, FinderDesktopWindow, FinderInformationWindow, FinderPreferencesWindow, FinderClippingWindow, FinderApplication, FinderProcess, FinderApplicationProcess, FinderDeskAccessoryProcess, FinderPreferences, FinderLabel, FinderIconFamily, FinderIconViewOptions, FinderColumnViewOptions, FinderListViewOptions, FinderColumn, FinderAliasList;
+@class FinderApplication, FinderItem, FinderContainer, FinderComputerObject, FinderDisk, FinderFolder, FinderDesktopObject, FinderTrashObject, FinderFile, FinderAliasFile, FinderApplicationFile, FinderDocumentFile, FinderInternetLocationFile, FinderClipping, FinderPackage, FinderWindow, FinderFinderWindow, FinderDesktopWindow, FinderInformationWindow, FinderPreferencesWindow, FinderClippingWindow, FinderProcess, FinderApplicationProcess, FinderDeskAccessoryProcess, FinderPreferences, FinderLabel, FinderIconFamily, FinderIconViewOptions, FinderColumnViewOptions, FinderListViewOptions, FinderColumn, FinderAliasList;
 
-typedef enum {
-	FinderIpnlGeneralInformationPanel = 'gpnl',
-	FinderIpnlSharingPanel = 'spnl',
-	FinderIpnlMemoryPanel = 'mpnl',
-	FinderIpnlPreviewPanel = 'vpnl',
-	FinderIpnlApplicationPanel = 'apnl',
-	FinderIpnlLanguagesPanel = 'pklg',
-	FinderIpnlPluginsPanel = 'pkpg',
-	FinderIpnlNameExtensionPanel = 'npnl',
-	FinderIpnlCommentsPanel = 'cpnl',
-	FinderIpnlContentIndexPanel = 'cinl'
-} FinderIpnl;
-
-typedef enum {
-	FinderPpleGeneralPreferencesPanel = 'pgnp',
-	FinderPpleLabelPreferencesPanel = 'plbp',
-	FinderPpleSidebarPreferencesPanel = 'psid',
-	FinderPpleAdvancedPreferencesPanel = 'padv'
-} FinderPple;
-
-typedef enum {
-	FinderEarrNotArranged = 'narr',
-	FinderEarrSnapToGrid = 'grda',
-	FinderEarrArrangedByName = 'nama',
-	FinderEarrArrangedByModificationDate = 'mdta',
-	FinderEarrArrangedByCreationDate = 'cdta',
-	FinderEarrArrangedBySize = 'siza',
-	FinderEarrArrangedByKind = 'kina',
-	FinderEarrArrangedByLabel = 'laba'
-} FinderEarr;
-
-typedef enum {
-	FinderEposRight = 'lrgt',
-	FinderEposBottom = 'lbot'
-} FinderEpos;
-
-typedef enum {
-	FinderSodrNormal = 'snrm',
-	FinderSodrReversed = 'srvs'
-} FinderSodr;
-
-typedef enum {
-	FinderIsizMini = 'miic',
-	FinderIsizSmall = 'smic',
-	FinderIsizLarge = 'lgic'
-} FinderIsiz;
-
-typedef enum {
-	FinderSortName = 'pnam',
-	FinderSortModificationDate = 'asmo',
-	FinderSortCreationDate = 'ascd',
-	FinderSortSize = 'phys',
-	FinderSortKind = 'kind',
-	FinderSortLabelIndex = 'labi',
-	FinderSortComment = 'comt',
-	FinderSortVersion = 'vers'
-} FinderSort;
-
-typedef enum {
+enum FinderPriv {
 	FinderPrivReadOnly = 'read',
 	FinderPrivReadWrite = 'rdwr',
 	FinderPrivWriteOnly = 'writ',
 	FinderPrivNone = 'none'
-} FinderPriv;
+};
+typedef enum FinderPriv FinderPriv;
 
-typedef enum {
-	FinderElsvNameColumn = 'elsn',
-	FinderElsvModificationDateColumn = 'elsm',
-	FinderElsvCreationDateColumn = 'elsc',
-	FinderElsvSizeColumn = 'elss',
-	FinderElsvKindColumn = 'elsk',
-	FinderElsvLabelColumn = 'elsl',
-	FinderElsvVersionColumn = 'elsv',
-	FinderElsvCommentColumn = 'elsC'
-} FinderElsv;
-
-typedef enum {
-	FinderEcvwIconView = 'icnv',
-	FinderEcvwListView = 'lsvw',
-	FinderEcvwColumnView = 'clvw',
-	FinderEcvwGroupView = 'grvw',
-	FinderEcvwFlowView = 'flvw'
-} FinderEcvw;
-
-typedef enum {
-	FinderLvicSmallIcon = 'smic',
-	FinderLvicLargeIcon = 'lgic'
-} FinderLvic;
-
-typedef enum {
+enum FinderEdfm {
 	FinderEdfmMacOSFormat = 'dfhf',
 	FinderEdfmMacOSExtendedFormat = 'dfh+',
 	FinderEdfmUFSFormat = 'dfuf',
@@ -116,8 +35,85 @@ typedef enum {
 	FinderEdfmFTPFormat = 'dfft',
 	FinderEdfmPacketWrittenUDFFormat = 'dfpu',
 	FinderEdfmXsanFormat = 'dfac',
-	FinderEdfmUnknownFormat = 'df??'
-} FinderEdfm;
+	FinderEdfmUnknownFormat = 'df\?\?'
+};
+typedef enum FinderEdfm FinderEdfm;
+
+enum FinderIpnl {
+	FinderIpnlGeneralInformationPanel = 'gpnl',
+	FinderIpnlSharingPanel = 'spnl',
+	FinderIpnlMemoryPanel = 'mpnl',
+	FinderIpnlPreviewPanel = 'vpnl',
+	FinderIpnlApplicationPanel = 'apnl',
+	FinderIpnlLanguagesPanel = 'pklg',
+	FinderIpnlPluginsPanel = 'pkpg',
+	FinderIpnlNameExtensionPanel = 'npnl',
+	FinderIpnlCommentsPanel = 'cpnl',
+	FinderIpnlContentIndexPanel = 'cinl',
+	FinderIpnlBurningPanel = 'bpnl',
+	FinderIpnlMoreInfoPanel = 'minl',
+	FinderIpnlSimpleHeaderPanel = 'shnl'
+};
+typedef enum FinderIpnl FinderIpnl;
+
+enum FinderPple {
+	FinderPpleGeneralPreferencesPanel = 'pgnp',
+	FinderPpleLabelPreferencesPanel = 'plbp',
+	FinderPpleSidebarPreferencesPanel = 'psid',
+	FinderPpleAdvancedPreferencesPanel = 'padv'
+};
+typedef enum FinderPple FinderPple;
+
+enum FinderEcvw {
+	FinderEcvwIconView = 'icnv',
+	FinderEcvwListView = 'lsvw',
+	FinderEcvwColumnView = 'clvw',
+	FinderEcvwGroupView = 'grvw',
+	FinderEcvwFlowView = 'flvw'
+};
+typedef enum FinderEcvw FinderEcvw;
+
+enum FinderEarr {
+	FinderEarrNotArranged = 'narr',
+	FinderEarrSnapToGrid = 'grda',
+	FinderEarrArrangedByName = 'nama',
+	FinderEarrArrangedByModificationDate = 'mdta',
+	FinderEarrArrangedByCreationDate = 'cdta',
+	FinderEarrArrangedBySize = 'siza',
+	FinderEarrArrangedByKind = 'kina',
+	FinderEarrArrangedByLabel = 'laba'
+};
+typedef enum FinderEarr FinderEarr;
+
+enum FinderEpos {
+	FinderEposRight = 'lrgt',
+	FinderEposBottom = 'lbot'
+};
+typedef enum FinderEpos FinderEpos;
+
+enum FinderSodr {
+	FinderSodrNormal = 'snrm',
+	FinderSodrReversed = 'srvs'
+};
+typedef enum FinderSodr FinderSodr;
+
+enum FinderElsv {
+	FinderElsvNameColumn = 'elsn',
+	FinderElsvModificationDateColumn = 'elsm',
+	FinderElsvCreationDateColumn = 'elsc',
+	FinderElsvSizeColumn = 'elss',
+	FinderElsvKindColumn = 'elsk',
+	FinderElsvLabelColumn = 'elsl',
+	FinderElsvVersionColumn = 'elsv',
+	FinderElsvCommentColumn = 'elsC'
+};
+typedef enum FinderElsv FinderElsv;
+
+enum FinderLvic {
+	FinderLvicSmallIcon = 'smic',
+	FinderLvicLargeIcon = 'lgic'
+};
+typedef enum FinderLvic FinderLvic;
 
 
 
@@ -176,7 +172,7 @@ typedef enum {
  * Finder items
  */
 
-// every item
+// An item
 @interface FinderItem : SBObject
 
 @property (copy) NSString *name;  // the name of the item
@@ -234,7 +230,7 @@ typedef enum {
  * Containers and folders
  */
 
-// every container
+// An item that contains other items
 @interface FinderContainer : FinderItem
 
 - (SBElementArray *) items;
@@ -263,7 +259,7 @@ typedef enum {
 
 @end
 
-// every disk
+// A disk
 @interface FinderDisk : FinderContainer
 
 - (SBElementArray *) items;
@@ -280,7 +276,7 @@ typedef enum {
 - (NSInteger) id;  // the unique id for this disk (unchanged while disk remains connected and Finder remains running)
 @property (readonly) long long capacity;  // the total number of bytes (free or used) on the disk
 @property (readonly) long long freeSpace;  // the number of free bytes left on the disk
-@property (readonly) BOOL ejectable;  // Can the media be ejected (floppies, CD's, and so on)?
+@property (readonly) BOOL ejectable;  // Can the media be ejected (floppies, CDs, and so on)?
 @property (readonly) BOOL localVolume;  // Is the media a local volume (as opposed to a file server)?
 @property (readonly) BOOL startup;  // Is this disk the boot disk?
 @property (readonly) FinderEdfm format;  // the filesystem format of this disk
@@ -290,7 +286,7 @@ typedef enum {
 
 @end
 
-// every folder
+// A folder
 @interface FinderFolder : FinderContainer
 
 - (SBElementArray *) items;
@@ -350,7 +346,7 @@ typedef enum {
  * Files
  */
 
-// every file
+// A file
 @interface FinderFile : FinderItem
 
 @property (copy) NSNumber *fileType;  // the OSType identifying the type of data contained in the item
@@ -362,7 +358,7 @@ typedef enum {
 
 @end
 
-// every alias file
+// An alias file (created with “Make Alias”)
 @interface FinderAliasFile : FinderFile
 
 @property (copy) SBObject *originalItem;  // the original item pointed to by the alias
@@ -370,7 +366,7 @@ typedef enum {
 
 @end
 
-// every application file
+// An application's file on disk
 @interface FinderApplicationFile : FinderFile
 
 - (NSString *) id;  // the bundle identifier or creator type of the application
@@ -384,13 +380,13 @@ typedef enum {
 
 @end
 
-// every document file
+// A document file
 @interface FinderDocumentFile : FinderFile
 
 
 @end
 
-// all internet location files
+// A file containing an internet location
 @interface FinderInternetLocationFile : FinderFile
 
 @property (copy, readonly) NSString *location;  // the internet location
@@ -398,7 +394,7 @@ typedef enum {
 
 @end
 
-// all clippings
+// A clipping
 @interface FinderClipping : FinderFile
 
 @property (copy, readonly) SBObject *clippingWindow;  // (NOT AVAILABLE YET) the clipping window for this clipping
@@ -406,7 +402,7 @@ typedef enum {
 
 @end
 
-// all packages
+// A package
 @interface FinderPackage : FinderItem
 
 
@@ -418,7 +414,7 @@ typedef enum {
  * Window classes
  */
 
-// every window
+// A window
 @interface FinderWindow : SBObject
 
 - (NSInteger) id;  // the unique id for this window
@@ -457,7 +453,7 @@ typedef enum {
 
 @end
 
-// every Finder window
+// A file viewer window
 @interface FinderFinderWindow : FinderWindow
 
 @property (copy) SBObject *target;  // the container at which this file viewer is targeted
@@ -466,7 +462,7 @@ typedef enum {
 @property (copy, readonly) FinderListViewOptions *listViewOptions;  // the list view options for the container window
 @property (copy, readonly) FinderColumnViewOptions *columnViewOptions;  // the column view options for the container window
 @property BOOL toolbarVisible;  // Is the window's toolbar visible?
-@property BOOL statusbarVisible;  // Is the window's statusbar visible?
+@property BOOL statusbarVisible;  // Is the window's status bar visible?
 @property NSInteger sidebarWidth;  // the width of the sidebar for the container window
 
 
@@ -495,7 +491,7 @@ typedef enum {
 
 @end
 
-// every clipping window
+// The window containing a clipping
 @interface FinderClippingWindow : FinderWindow
 
 
@@ -514,7 +510,7 @@ typedef enum {
 
 @end
 
-// every process
+// A process running on this computer
 @interface FinderProcess : SBObject
 
 @property (copy, readonly) NSString *name;  // the name of the process
@@ -549,7 +545,7 @@ typedef enum {
 
 @end
 
-// every application process
+// A process launched from an application file
 @interface FinderApplicationProcess : FinderProcess
 
 @property (copy, readonly) FinderApplicationFile *applicationFile;  // the application file from which this process was launched
@@ -557,7 +553,7 @@ typedef enum {
 
 @end
 
-// every desk accessory process
+// A process launched from a desk accessory file
 @interface FinderDeskAccessoryProcess : FinderProcess
 
 @property (copy, readonly) SBObject *deskAccessoryFile;  // the desk accessory file from which this process was launched
@@ -763,7 +759,7 @@ typedef enum {
 
 @end
 
-// every list column
+// a column of a list view
 @interface FinderColumn : SBObject
 
 @property NSInteger index;  // the index in the front-to-back ordering within its container
